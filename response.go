@@ -19,3 +19,17 @@ type TokenResponse struct {
 	ResponseMessage string `json:"response_message"`
 	Token           string `json:"token"`
 }
+
+// CategoryResponse holds the response retured for the category request call
+type CategoryResponse struct {
+	TriviaCategories []struct {
+		ID   int    `json:"id"`
+		Name string `json:"name"`
+	} `json:"trivia_categories"`
+}
+
+// Category holds the structure of category
+type Category struct {
+	ID   int
+	Name string
+}
